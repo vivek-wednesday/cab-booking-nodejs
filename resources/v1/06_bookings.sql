@@ -8,6 +8,6 @@ CREATE TABLE bookings
     start_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     drop_location VARCHAR(32) NOT NULL,
     end_time DATETIME DEFAULT CURRENT_TIMESTAMP,
-    cost NUMERIC NOT NULL,
+    cost INT NOT NULL,
     booking_status VARCHAR(32) NOT NULL
 );
