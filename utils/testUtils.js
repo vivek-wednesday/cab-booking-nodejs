@@ -44,12 +44,34 @@ export function configDB(metadataOptions = DEFAULT_METADATA_OPTIONS) {
 
     oauthClientScopesMock.findAll = query =>
         oauthClientScopesMock.findById(query);
+
+    const bookingMock = DBConnectionMock.define(
+        'bookings',
+        mockData.MOCK_BOOKING
+    );
+    bookingMock.findByPk = query => bookingMock.findById(query);
+    bookingMock.count = () => 1;
+
+    const driversMock = DBConnectionMock.define(
+        'drivers',
+        mockData.MOCK_DRIVERS
+    );
+    driversMock.findByPk = query => driversMock.findById(query);
+    driversMock.count = () => 1;
+
+    const cabsMock = DBConnectionMock.define('cabs', mockData.MOCK_CABS);
+    cabsMock.findByPk = query => cabsMock.findById(query);
+    cabsMock.count = () => 1;
+
     return {
         users: userMock,
         oauth_clients: oauthClientsMock,
         oauth_access_tokens: oauthAccessTokensMock,
         oauth_client_resources: oauthClientResourcesMock,
-        oauth_client_scopes: oauthClientScopesMock
+        oauth_client_scopes: oauthClientScopesMock,
+        bookings: bookingMock,
+        drivers: driversMock,
+        cabs: cabsMock
     };
 }
 

@@ -5,6 +5,33 @@ export const ONE_USER_DATA = {
     email: 'mac@wednesday.is'
 };
 
+export const ONE_BOOKING_DATA = {
+    booking_id: 1,
+    user_id: 1,
+    driver_id: 1,
+    cab_id: 1,
+    pickup_location: 'Delhi',
+    drop_location: 'Ghaziabad',
+    cost: 100,
+    booking_status: 'not confirmed'
+};
+
+export const ONE_DRIVER_DATA = {
+    driver_id: 1,
+    cab_id: 1,
+    first_name: 'John',
+    last_name: 'Doe',
+    current_location: 'Delhi'
+};
+
+export const ONE_CAB_DATA = {
+    cab_id: 1,
+    driver_id: 1,
+    cab_model: 'Wagon-R',
+    cab_license: 'DL-XXXX',
+    cab_type: 'Commercial'
+};
+
 export const GRANT_TYPE = {
     CLIENT_CREDENTIALS: 'CLIENT_CREDENTIALS'
 };
