@@ -4,5 +4,6 @@ CREATE TABLE cabs
     driver_id INT NOT NULL,
     cab_model VARCHAR(32) NOT NULL,
     cab_license VARCHAR(32) NOT NULL UNIQUE KEY,
-    cab_type VARCHAR(32) NOT NULL
+    cab_type VARCHAR(32) NOT NULL,
+    INDEX(cab_id)
 );

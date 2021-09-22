@@ -9,5 +9,11 @@ CREATE TABLE bookings
     drop_location VARCHAR(32) NOT NULL,
     end_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     cost INT NOT NULL,
-    booking_status VARCHAR(32) NOT NULL
+    booking_status VARCHAR(32) NOT NULL,
+    INDEX(booking_id),
+    INDEX(user_id),
+    INDEX(driver_id),
+    FOREIGN KEY (driver_id) REFERENCES drivers(driver_id),
+    FOREIGN KEY (cab_id) REFERENCES cabs(cab_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
