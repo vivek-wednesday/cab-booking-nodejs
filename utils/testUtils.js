@@ -49,18 +49,15 @@ export function configDB(metadataOptions = DEFAULT_METADATA_OPTIONS) {
         'bookings',
         mockData.MOCK_BOOKING
     );
-    bookingMock.findByPk = query => bookingMock.findById(query);
     bookingMock.count = () => 1;
 
     const driversMock = DBConnectionMock.define(
         'drivers',
         mockData.MOCK_DRIVERS
     );
-    driversMock.findByPk = query => driversMock.findById(query);
     driversMock.count = () => 1;
 
     const cabsMock = DBConnectionMock.define('cabs', mockData.MOCK_CABS);
-    cabsMock.findByPk = query => cabsMock.findById(query);
     cabsMock.count = () => 1;
 
     return {
