@@ -6,6 +6,9 @@ CREATE TABLE drivers
     last_name VARCHAR(32) NOT NULL,
     created_on DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     current_location VARCHAR(32) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    deleted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     INDEX(driver_id),
     FOREIGN KEY (cab_id) REFERENCES cabs(cab_id)
 );

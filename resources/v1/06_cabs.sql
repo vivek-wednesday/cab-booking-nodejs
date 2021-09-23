@@ -5,5 +5,9 @@ CREATE TABLE cabs
     cab_model VARCHAR(32) NOT NULL,
     cab_license VARCHAR(32) NOT NULL UNIQUE KEY,
     cab_type VARCHAR(32) NOT NULL,
-    INDEX(cab_id)
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    deleted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    INDEX(cab_id),
+    INDEX(cab_license)
 );
