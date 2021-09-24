@@ -108,6 +108,17 @@ export const paths = [
         customValidator: async payload => await hasScopeOverUser(payload)
     },
     {
+        path: '/bookings/user/{userId}',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN,
+            SCOPE_TYPE.USER
+        ],
+        method: 'POST',
+        customValidator: async payload => await hasScopeOverUser(payload)
+    },
+    {
         path: '/bookings/driver/{driverId}',
         scopes: [
             SCOPE_TYPE.INTERNAL_SERVICE,
@@ -128,6 +139,15 @@ export const paths = [
         method: 'GET'
     },
     {
+        path: '/drivers',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'POST'
+    },
+    {
         path: '/drivers/{driverId}',
         scopes: [
             SCOPE_TYPE.INTERNAL_SERVICE,
@@ -144,6 +164,15 @@ export const paths = [
             SCOPE_TYPE.ADMIN
         ],
         method: 'GET'
+    },
+    {
+        path: '/cabs',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'POST'
     },
     {
         path: '/cabs/{cabId}',
