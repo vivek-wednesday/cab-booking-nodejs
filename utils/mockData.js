@@ -36,6 +36,30 @@ export const mockData = {
         email: 'sharan@wednesday.is',
         oauth_client_id: 1
     },
+    MOCK_BOOKING: {
+        bookingId: 1,
+        userId: 1,
+        driverId: 1,
+        cabId: 1,
+        pickupLocation: 'Delhi',
+        dropLocation: 'Ghaziabad',
+        cost: 100,
+        bookingStatus: 'not confirmed'
+    },
+    MOCK_DRIVERS: {
+        driverId: 1,
+        cabId: 1,
+        firstName: 'John',
+        lastName: 'Doe',
+        currentLocation: 'Delhi'
+    },
+    MOCK_CABS: {
+        driverId: 1,
+        cabId: 1,
+        cabType: 'Commercial',
+        cabModel: 'Wagon-R',
+        cabLicense: 'DL-XXXX'
+    },
     MOCK_OAUTH_CLIENTS: (metadataOptions = DEFAULT_METADATA_OPTIONS) => ({
         id: 1,
         clientId: 'TEST_CLIENT_ID_1',
