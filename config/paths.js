@@ -123,11 +123,9 @@ export const paths = [
         scopes: [
             SCOPE_TYPE.INTERNAL_SERVICE,
             SCOPE_TYPE.SUPER_ADMIN,
-            SCOPE_TYPE.ADMIN,
-            SCOPE_TYPE.USER
+            SCOPE_TYPE.ADMIN
         ],
-        method: 'GET',
-        customValidator: async payload => await hasScopeOverUser(payload)
+        method: 'GET'
     },
     {
         path: '/drivers',
