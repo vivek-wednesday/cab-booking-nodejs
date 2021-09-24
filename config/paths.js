@@ -76,5 +76,82 @@ export const paths = [
         ],
         method: 'GET',
         customValidator: async payload => await hasScopeOverUser(payload)
+    },
+    {
+        path: '/bookings',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'GET'
+    },
+    {
+        path: '/bookings/{bookingId}',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN,
+            SCOPE_TYPE.USER
+        ],
+        method: 'GET'
+    },
+    {
+        path: '/bookings/user/{userId}',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN,
+            SCOPE_TYPE.USER
+        ],
+        method: 'GET',
+        customValidator: async payload => await hasScopeOverUser(payload)
+    },
+    {
+        path: '/bookings/driver/{driverId}',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN,
+            SCOPE_TYPE.USER
+        ],
+        method: 'GET',
+        customValidator: async payload => await hasScopeOverUser(payload)
+    },
+    {
+        path: '/drivers',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'GET'
+    },
+    {
+        path: '/drivers/{driverId}',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'GET'
+    },
+    {
+        path: '/cabs',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'GET'
+    },
+    {
+        path: '/cabs/{cabId}',
+        scopes: [
+            SCOPE_TYPE.INTERNAL_SERVICE,
+            SCOPE_TYPE.SUPER_ADMIN,
+            SCOPE_TYPE.ADMIN
+        ],
+        method: 'GET'
     }
 ];
