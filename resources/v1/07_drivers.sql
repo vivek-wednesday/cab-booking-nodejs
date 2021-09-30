@@ -4,7 +4,6 @@ CREATE TABLE drivers
     cab_id INT NOT NULL,
     first_name VARCHAR(32) NOT NULL,
     last_name VARCHAR(32) NOT NULL,
-    created_on DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     current_location VARCHAR(32) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
